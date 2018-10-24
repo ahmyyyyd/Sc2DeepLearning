@@ -1,1 +1,1 @@
-# Sc2DeppLearning
+# Sc2DeepLearning
