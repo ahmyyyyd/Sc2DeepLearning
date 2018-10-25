@@ -57,10 +57,10 @@ class TuTBot(sc2.BotAI):
                         
             elif len(self.units(GATEWAY)) < self.units(NEXUS).amount*3:
                 if self.can_afford(GATEWAY) and not self.already_pending(GATEWAY):
-                    if self.units(GATEWAY).amount is not 1 and self.units(NEXUS).amount is 1:
-                        await self.build(GATEWAY, near=pylon)
-                    else:
+                    if self.units(GATEWAY).amount is 1 and self.units(NEXUS).amount is 1:
                         self.expand()
+                    else:
+                        await self.build(GATEWAY, near=pylon)
                     
 
     
